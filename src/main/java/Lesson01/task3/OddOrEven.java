@@ -1,4 +1,4 @@
-package Lesson01.task3;
+package main.java.Lesson01.task3;
 
     public class OddOrEven {
         int n = 0;

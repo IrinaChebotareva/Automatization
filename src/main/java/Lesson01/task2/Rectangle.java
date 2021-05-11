@@ -1,4 +1,4 @@
-package Lesson01.task2;
+package main.java.Lesson01.task2;
 
 public class Rectangle {
 

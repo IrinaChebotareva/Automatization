@@ -1,4 +1,4 @@
-package Lesson01.task5;
+package main.java.Lesson01.task5;
 
 public class LogicBoolean {
 

@@ -1,4 +1,4 @@
-package Lesson01.task6;
+package main.java.Lesson01.task6;
 
 public class LogicIn {
     boolean a;

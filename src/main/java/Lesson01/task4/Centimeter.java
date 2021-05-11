@@ -1,4 +1,4 @@
-package Lesson01.task4;
+package main.java.Lesson01.task4;
 
 public class Centimeter {
     int centimeter = 0;
