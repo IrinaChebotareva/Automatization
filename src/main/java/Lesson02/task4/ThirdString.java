@@ -1,9 +1,9 @@
-package main.java.Lesson02.task4;
+package Lesson02.task4;
 
 public class ThirdString {
     public static void main(String[] args) {
-        String string1 = "post";
-        String string2 = "get";
+        String string1 = "ping";
+        String string2 = "pong";
         char[] result1 = string1.toCharArray();
         char[] result2 = string2.toCharArray();
 
@@ -11,7 +11,7 @@ public class ThirdString {
     }
 
 
-    public static void sequenceChars(char result1[], char result2[]) {
+    public static void sequenceChars(char[] result1, char[] result2) {
         String newStr = "";
         for (int i = 0; i < result1.length; i++) {
             for (int j = 0; j < result2.length; j++) {
