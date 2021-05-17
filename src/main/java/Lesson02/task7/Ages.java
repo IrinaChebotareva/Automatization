@@ -1,13 +1,13 @@
-package main.java.Lesson02.task7;
+package Lesson02.task7;
 
 public class Ages {
     public static void main(String[] args) {
         int age = 112;
-        ageOfPerson(age);
+        printAgeDescription(age);
 
     }
 
-    public static void ageOfPerson(int age) {
+    public static void printAgeDescription(int age) {
         if (age >= 25 && age < 44) {
             System.out.println("Молодой возраст");
         } else if (age >= 44 && age < 60) {

@@ -1,7 +1,6 @@
-package main.java.Lesson01.task4;
+package Lesson01.task4;
 
 public class Centimeter {
-    int centimeter = 0;
 
     int becomeMeter(int centimeter) {
         int meter = centimeter / 100;

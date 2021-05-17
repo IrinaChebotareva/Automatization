@@ -2,7 +2,7 @@ package Lesson02.task6;
 
 import java.util.Random;
 
-public class Transponation2 {
+public class InvertBy2 {
 
     public static void main(String[] args) {
         final int m = new Random().nextInt(9) + 3;
@@ -28,7 +28,9 @@ public class Transponation2 {
             for (int j = 0; j < n; j++) {
                 if (sourceMatrix[i][j] == 2) {
                     destMatrix[i][j] = 2;
+                    inverse = 1;
                     was2 = true;
+                    continue;
                 } else
                     destMatrix[i][j] = was2
                             ? (sourceMatrix[i][j] + 1) % 2

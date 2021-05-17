@@ -1,23 +1,15 @@
-package main.java.Lesson01.task3;
+package Lesson01.task3;
 
-    public class OddOrEven {
-        int n = 0;
+public class OddOrEven {
 
-        boolean isOddOrEven(int n) {
-            if (n % 2 == 0) {
-                return false;
-            } else {
-                return true;
-            }
-        }
+    boolean isOdd(int n) {
+        return  (n % 2 == 0);
+    }
 
     public static void main(String[] args) {
         OddOrEven oddOrEven = new OddOrEven();
-        System.out.println(oddOrEven.isOddOrEven(14));
-        System.out.println(oddOrEven.isOddOrEven(19));
-
-
-
+        System.out.println(oddOrEven.isOdd(14));
+        System.out.println(oddOrEven.isOdd(19));
     }
 
 }

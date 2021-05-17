@@ -1,13 +1,9 @@
-package main.java.Lesson01.task6;
+package Lesson01.task6;
 
 public class LogicIn {
-    boolean a;
-    boolean b;
-    boolean c;
-    boolean d;
 
-    boolean logicIn (boolean a, boolean b, boolean c, boolean d) {
-        return ((a && b) && ! (c || d));
+    boolean logicIn(boolean a, boolean b, boolean c, boolean d) {
+        return ((a && b) && !(c || d));
     }
 
     public static void main(String[] args) {

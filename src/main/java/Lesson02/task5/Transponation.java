@@ -1,46 +1,69 @@
-package main.java.Lesson02.task5;
+package Lesson02.task5;
+
+import java.util.Random;
 
 public class Transponation {
 
     public static void main(String[] args) {
-
-
-        //  создаем матрицу n на n
-        int n = 5;
-        int[][] a = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                a[i][j] = n * i + j;
-            }
-        }
-
-        // выводим на экран начальную матрицу
-        System.out.println("Начальная матрица");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.printf("%4d", a[i][j]);
-            }
-            System.out.println();
-        }
-
-        // транспонирование матрицы
-        for (int i = 0; i < n; i++) {
-            for (int j = i+1; j < n; j++) {
-                int temp = a[i][j];
-                a[i][j] = a[j][i];
-                a[j][i] = temp;
-            }
-        }
-
-        // выводим на экран транспонированную матрицу
-        System.out.println();
-        System.out.println("Новая матрица");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.printf("%3d", a[i][j]);
-            }
-            System.out.println();
-        }
+        final int M = new Random().nextInt(3) + 3;
+        final int N = new Random().nextInt(3) + 3;
+        int[][] sourceMatrix = createArray(M, N);
+        int[][] destinationMatrix = transposeArray(sourceMatrix);
+        printArray(sourceMatrix);
+        printArray(destinationMatrix);
     }
+
+    /**
+     * Создает двумерный массив размером m x n и заполняет его случайными значениями
+     * @param m - размерность M
+     * @param n - размерность N
+     * @return массив со случайными значениями
+     */
+    static int[][] createArray(int m, int n) {
+        int[][] result = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                result[i][j] = new Random().nextInt(10);
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Транспонирует матрицу
+     *
+     * @param sourceArray - исходная матрица
+     * @return транспонированная матрица
+     */
+    static int[][] transposeArray(int[][] sourceArray) {
+        final int M = sourceArray.length;
+        final int N = sourceArray[0].length;
+        int[][] result = new int[N][M];
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < N; j++) {
+                result[j][i] = sourceArray[i][j];
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Выводит матрицу на экран
+     *
+     * @param matrix - матрица
+     */
+    static void printArray(int[][] matrix) {
+        final int M = matrix.length;
+        final int N = matrix[0].length;
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < N; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+
 }
 
